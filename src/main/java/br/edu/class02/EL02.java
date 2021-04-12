@@ -77,7 +77,7 @@ public class EL02 {
         int[] arrayOfSums3 = getArrayOfSums(firstArray3, secondArray3);
         assert (hasSameElements(expectedResult3, arrayOfSums3));
     }
-*/
+
     private static boolean hasSameElements(int[] expected, int[] obtained) {
         if(obtained == null || expected.length != obtained.length)
             return false;
@@ -87,5 +87,5 @@ public class EL02 {
                return false;
         }
         return true;
-    }
+    }*/
 }
