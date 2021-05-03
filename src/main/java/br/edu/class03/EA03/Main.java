@@ -13,6 +13,5 @@ public class Main {
         System.out.println(v1.getValue());
 
         System.out.println(ValueHolder.value);
-
     }
 }
