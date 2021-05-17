@@ -1,4 +1,4 @@
-package br.edu.class04;
+package br.edu.pratico01;
 
 public class UserAccount {
     public static final int MAX_TIMELINE_POSTS = 10;

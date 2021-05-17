@@ -1,4 +1,4 @@
-package br.edu.class04;
+package br.edu.pratico01;
 
 public class Principal {
 

@@ -1,4 +1,4 @@
-package br.edu.class05.ea01;
+package br.edu.class04.ea01;
 
 public class Gato extends Mamifero{ // Gato herda Mamífero, logo Gato É UM Mamífero.
     private boolean unhaAfiada; // Variável adicionada pelo subtipo

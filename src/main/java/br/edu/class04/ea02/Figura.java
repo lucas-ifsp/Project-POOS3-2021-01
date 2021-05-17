@@ -1,4 +1,4 @@
-package br.edu.class05.ea02;
+package br.edu.class04.ea02;
 
 public class Figura {
     private int x;

@@ -1,4 +1,4 @@
-package br.edu.class04;
+package br.edu.pratico01;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

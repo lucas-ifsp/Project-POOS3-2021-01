@@ -1,4 +1,4 @@
-package br.edu.class05.ea01;
+package br.edu.class04.ea01;
 
 public abstract  class Mamifero {
     private String nome;

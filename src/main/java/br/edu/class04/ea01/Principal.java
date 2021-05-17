@@ -1,4 +1,4 @@
-package br.edu.class05.ea01;
+package br.edu.class04.ea01;
 
 public class Principal {
     public static void main(String[] args) {
