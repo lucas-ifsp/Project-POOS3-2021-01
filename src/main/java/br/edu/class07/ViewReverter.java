@@ -30,15 +30,11 @@ public class ViewReverter extends Application {
         tfInput.setPromptText("Input text"); //Dica de texto para tfInput
         btnExecute = new Button("Revert");
 
-        btnExecute.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                String inputText = tfInput.getText();
-                StringBuilder sb = new StringBuilder(inputText);
-                lbResult.setText("Result: " + sb.reverse());
-            }
+        btnExecute.setOnAction(actionEvent -> {
+            String inputText = tfInput.getText();
+            StringBuilder sb = new StringBuilder(inputText);
+            lbResult.setText("Result: " + sb.reverse());
         });
-
 
         lbResult = new Label("Result:");
 
