@@ -13,7 +13,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
-public class ViewReverter extends Application implements EventHandler {
+public class ViewReverter extends Application {
 
     private TextField tfInput; //Campo de texto
     private Label lbResult, lbInput; // Rótulo, não editável
@@ -30,7 +30,14 @@ public class ViewReverter extends Application implements EventHandler {
         tfInput.setPromptText("Input text"); //Dica de texto para tfInput
         btnExecute = new Button("Revert");
 
-        btnExecute.setOnAction(this);
+        btnExecute.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                String inputText = tfInput.getText();
+                StringBuilder sb = new StringBuilder(inputText);
+                lbResult.setText("Result: " + sb.reverse());
+            }
+        });
 
 
         lbResult = new Label("Result:");
@@ -48,12 +55,4 @@ public class ViewReverter extends Application implements EventHandler {
         stage.show(); //exibe a janela
     }
 
-    @Override
-    public void handle(Event event) {
-        if(event.getSource() == btnExecute){
-            String inputText = tfInput.getText();
-            StringBuilder sb = new StringBuilder(inputText);
-            lbResult.setText("Result: " + sb.reverse());
-        }
-    }
 }
