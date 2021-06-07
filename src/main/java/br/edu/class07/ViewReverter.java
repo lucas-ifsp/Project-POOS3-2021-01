@@ -18,6 +18,7 @@ public class ViewReverter extends Application {
     private TextField tfInput; //Campo de texto
     private Label lbResult, lbInput; // Rótulo, não editável
     private Button btnExecute; // Botão
+    private ViewReverterController ctrl = new ViewReverterController(this);
 
     public static void main (String[] args){
         launch(args); //método launch de Application
@@ -29,12 +30,7 @@ public class ViewReverter extends Application {
         tfInput = new TextField();
         tfInput.setPromptText("Input text"); //Dica de texto para tfInput
         btnExecute = new Button("Revert");
-
-        btnExecute.setOnAction(actionEvent -> {
-            String inputText = tfInput.getText();
-            StringBuilder sb = new StringBuilder(inputText);
-            lbResult.setText("Result: " + sb.reverse());
-        });
+        btnExecute.setOnAction(e -> ctrl.reverse());
 
         lbResult = new Label("Result:");
 
@@ -51,4 +47,11 @@ public class ViewReverter extends Application {
         stage.show(); //exibe a janela
     }
 
+    public String getInput() {
+       return tfInput.getText();
+    }
+
+    public void setText(String s) {
+        lbResult.setText(s);
+    }
 }
