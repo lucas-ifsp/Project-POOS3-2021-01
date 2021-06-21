@@ -1,6 +1,7 @@
 module poos3{
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.sql;
 
     opens br.edu.class07 to javafx.fxml;
     opens br.edu.class08.controller to javafx.fxml;
